@@ -1,0 +1,63 @@
+\hypertarget{page_8h_source}{}\doxysection{page.\+h}
+\label{page_8h_source}\index{/home/germanv/Documentos/proyectos\_prueba\_tecnica/modbus/dev-\/iot/main/include/page.h@{/home/germanv/Documentos/proyectos\_prueba\_tecnica/modbus/dev-\/iot/main/include/page.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PAGE\_HTML\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PAGE\_HTML\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// HTML page to capture Wi-\/Fi credentials}}
+\DoxyCodeLine{7 \textcolor{keyword}{const} \textcolor{keywordtype}{char} html\_page[] =}
+\DoxyCodeLine{8     \textcolor{stringliteral}{"{}<html>"{}}}
+\DoxyCodeLine{9     \textcolor{stringliteral}{"{}<head>"{}}}
+\DoxyCodeLine{10     \textcolor{stringliteral}{"{}<meta charset=\(\backslash\)"{}UTF-\/8\(\backslash\)"{}>"{}}}
+\DoxyCodeLine{11     \textcolor{stringliteral}{"{}<style>"{}}}
+\DoxyCodeLine{12     \textcolor{stringliteral}{"{}body \{ font-\/family: Arial, sans-\/serif; display: flex; justify-\/content: center; align-\/items: center; height: 100vh; margin: 0; background-\/color: \#f2f2f2; \}"{}}}
+\DoxyCodeLine{13     \textcolor{stringliteral}{"{}.container \{ text-\/align: center; max-\/width: 400px; \}"{}}}
+\DoxyCodeLine{14     \textcolor{stringliteral}{"{}h1 \{ color: \#333333; font-\/size: 24px; margin-\/bottom: 10px; \}"{}}}
+\DoxyCodeLine{15     \textcolor{stringliteral}{"{}p \{ color: \#555555; font-\/size: 14px; margin-\/bottom: 20px; \}"{}}}
+\DoxyCodeLine{16     \textcolor{stringliteral}{"{}form \{ background-\/color: \#ffffff; padding: 20px; border-\/radius: 8px; box-\/shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-\/align: left; \}"{}}}
+\DoxyCodeLine{17     \textcolor{stringliteral}{"{}input[type=text], input[type=password] \{ width: 100\%; padding: 8px; margin: 8px 0; border: 1px solid \#ccc; border-\/radius: 4px; box-\/sizing: border-\/box; \}"{}}}
+\DoxyCodeLine{18     \textcolor{stringliteral}{"{}input[type=submit] \{ background-\/color: \#4CAF50; color: white; padding: 10px 15px; border: none; border-\/radius: 4px; cursor: pointer; width: 100\%; font-\/size: 16px; \}"{}}}
+\DoxyCodeLine{19     \textcolor{stringliteral}{"{}input[type=submit]:hover \{ background-\/color: \#45a049; \}"{}}}
+\DoxyCodeLine{20     \textcolor{stringliteral}{"{}</style>"{}}}
+\DoxyCodeLine{21     \textcolor{stringliteral}{"{}</head>"{}}}
+\DoxyCodeLine{22     \textcolor{stringliteral}{"{}<body>"{}}}
+\DoxyCodeLine{23     \textcolor{stringliteral}{"{}<div class=\(\backslash\)"{}container\(\backslash\)"{}>"{}}}
+\DoxyCodeLine{24     \textcolor{stringliteral}{"{}<h1>Configuración WiFi</h1>"{}}}
+\DoxyCodeLine{25     \textcolor{stringliteral}{"{}<p>Ingrese las credenciales de la red WiFi a la cual desea conectarse</p>"{}}}
+\DoxyCodeLine{26     \textcolor{stringliteral}{"{}<form action=\(\backslash\)"{}/c\(\backslash\)"{} method=\(\backslash\)"{}POST\(\backslash\)"{}>"{}}}
+\DoxyCodeLine{27     \textcolor{stringliteral}{"{}Nombre de Red WiFi: <input type=\(\backslash\)"{}text\(\backslash\)"{} name=\(\backslash\)"{}ssid\(\backslash\)"{}><br>"{}}}
+\DoxyCodeLine{28     \textcolor{stringliteral}{"{}Contraseña de WiFi: <input type=\(\backslash\)"{}password\(\backslash\)"{} name=\(\backslash\)"{}password\(\backslash\)"{}><br>"{}}}
+\DoxyCodeLine{29     \textcolor{stringliteral}{"{}<input type=\(\backslash\)"{}submit\(\backslash\)"{} value=\(\backslash\)"{}Conectar\(\backslash\)"{}>"{}}}
+\DoxyCodeLine{30     \textcolor{stringliteral}{"{}</form>"{}}}
+\DoxyCodeLine{31     \textcolor{stringliteral}{"{}</div>"{}}}
+\DoxyCodeLine{32     \textcolor{stringliteral}{"{}</body>"{}}}
+\DoxyCodeLine{33     \textcolor{stringliteral}{"{}</html>"{}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{// Página de confirmación al recibir credenciales}}
+\DoxyCodeLine{39 \textcolor{keyword}{const} \textcolor{keywordtype}{char} confirmation\_page[] =}
+\DoxyCodeLine{40     \textcolor{stringliteral}{"{}<html>"{}}}
+\DoxyCodeLine{41     \textcolor{stringliteral}{"{}<head>"{}}}
+\DoxyCodeLine{42     \textcolor{stringliteral}{"{}<meta charset=\(\backslash\)"{}UTF-\/8\(\backslash\)"{}>"{}}}
+\DoxyCodeLine{43     \textcolor{stringliteral}{"{}<style>"{}}}
+\DoxyCodeLine{44     \textcolor{stringliteral}{"{}body \{ font-\/family: Arial, sans-\/serif; display: flex; justify-\/content: center; align-\/items: center; height: 100vh; margin: 0; background-\/color: \#f2f2f2; \}"{}}}
+\DoxyCodeLine{45     \textcolor{stringliteral}{"{}.message \{ text-\/align: center; background-\/color: \#ffffff; padding: 20px; border-\/radius: 8px; box-\/shadow: 0 4px 8px rgba(0, 0, 0, 0.1); \}"{}}}
+\DoxyCodeLine{46     \textcolor{stringliteral}{"{}h1 \{ color: \#333333; font-\/size: 24px; \}"{}}}
+\DoxyCodeLine{47     \textcolor{stringliteral}{"{}p \{ color: \#555555; font-\/size: 16px; \}"{}}}
+\DoxyCodeLine{48     \textcolor{stringliteral}{"{}</style>"{}}}
+\DoxyCodeLine{49     \textcolor{stringliteral}{"{}</head>"{}}}
+\DoxyCodeLine{50     \textcolor{stringliteral}{"{}<body>"{}}}
+\DoxyCodeLine{51     \textcolor{stringliteral}{"{}<div class=\(\backslash\)"{}message\(\backslash\)"{}>"{}}}
+\DoxyCodeLine{52     \textcolor{stringliteral}{"{}<h1>Credenciales recibidas</h1>"{}}}
+\DoxyCodeLine{53     \textcolor{stringliteral}{"{}<p>Iniciando dispositivo QMAX</p>"{}}}
+\DoxyCodeLine{54     \textcolor{stringliteral}{"{}</div>"{}}}
+\DoxyCodeLine{55     \textcolor{stringliteral}{"{}</body>"{}}}
+\DoxyCodeLine{56     \textcolor{stringliteral}{"{}</html>"{}};}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

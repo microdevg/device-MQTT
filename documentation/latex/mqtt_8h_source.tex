@@ -1,0 +1,26 @@
+\hypertarget{mqtt_8h_source}{}\doxysection{mqtt.\+h}
+\label{mqtt_8h_source}\index{/home/germanv/Documentos/proyectos\_prueba\_tecnica/modbus/dev-\/iot/main/include/mqtt.h@{/home/germanv/Documentos/proyectos\_prueba\_tecnica/modbus/dev-\/iot/main/include/mqtt.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MQTT\_H}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define MQTT\_H}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}base.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 }
+\DoxyCodeLine{21 esp\_err\_t mqtt\_init(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* uri, esp\_callback\_t conn, esp\_callback\_t disconn,callback\_data\_t data\_received);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{32 esp\_err\_t mqtt\_publish(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* topic,\textcolor{keywordtype}{int} qos, \textcolor{keywordtype}{int} retain);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{44 esp\_err\_t mqtt\_publish\_on\_queue(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* msg, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* topic,\textcolor{keywordtype}{int} qos, \textcolor{keywordtype}{int} retain);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{53 esp\_err\_t mqtt\_subcribe( \textcolor{keywordtype}{char}* topic, \textcolor{keywordtype}{int} qos);}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
