@@ -13,7 +13,10 @@
 
 
 
-
+/**
+ * @brief Delete credential when they don't work
+ * 
+ */
 void clean_credential(){
     printf("Clean credentials");
     set_credential("","");
@@ -22,20 +25,24 @@ void clean_credential(){
 }
 
 
+
+/**
+ * @brief Recconect WiFi routine
+ * 
+ */
 void reconnect(){
     printf("Try to reconnect WiFi\n");
 }
 
 
 
-void    start_app(esp_callback_t app, esp_callback_t error){
 
+
+void start_app(esp_callback_t app, esp_callback_t error){
     esp_err_t err = ESP_OK;
     char id[30] ={0};
     char pass[30] = {0};
     err = get_credentials(id,pass);
-
-
 
     if(err == ESP_OK  && (strlen(id) )){
         // Try WiFi connect 

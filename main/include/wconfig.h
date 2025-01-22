@@ -14,7 +14,11 @@
 
 
 
-
+/**
+ * @brief  Open web server portal
+ * 
+ * @return int*   web this var is 1, you have the credential in memory.
+ */
 int *  portal_wifi_ap();
 
 
