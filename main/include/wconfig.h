@@ -15,7 +15,7 @@
 
 
 
-void  wconfig(esp_callback_t app, esp_callback_t error);
+int *  portal_wifi_ap();
 
 
 

@@ -19,7 +19,7 @@
 
 #define RCONN_TRY_MAX                   10
 
-const char* TAG = "wIFI";
+static const char* TAG = "WIFI";
 
 
 esp_callback_t __callback_connection = NULL;
@@ -67,15 +67,21 @@ static void event_handler(void* arg, esp_event_base_t event_base,int32_t event_i
 {
     if( event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START) esp_wifi_connect();
     else if( event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
-            {   if(_state.try_counter < RCONN_TRY_MAX){
+            {   
+                 ESP_LOGI(TAG,"WiFi disconnected\n");
+                _state.wifi_connected = false;
+                SECURE_CALL(__callback_disconnection);
+                
+                if(_state.try_counter < RCONN_TRY_MAX){
                     _state.wifi_connected = false;
-                    ESP_LOGI(TAG, "[Wifi desconectado, intentando reconexion:%u / %u]\n",_state.try_counter,RCONN_TRY_MAX);
+                    ESP_LOGI(TAG, "[WiFi disconnected, try reconnect :%u / %u]\n",_state.try_counter,RCONN_TRY_MAX);
                     _state.try_counter ++;
                     esp_wifi_connect();}
                 else{
-                    ESP_LOGI(TAG,"[Fallaron los intentos de reconexion]\n");
+                    ESP_LOGI(TAG,"[Reconnection failed]\n");
                     _state.try_counter = 0;
-                    SECURE_CALL(__callback_failed);}
+                    SECURE_CALL(__callback_failed);
+                }
                 return;
             }
    
@@ -89,11 +95,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,int32_t event_i
         _state.try_counter = 0;
         _state.wifi_connected = true;
         return;}
-    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED){
-        ESP_LOGI(TAG,"evento me desconecte de la red\n");
-        _state.wifi_connected = false;
-        SECURE_CALL(__callback_disconnection);
-        return;}
+   
 }
 
 
